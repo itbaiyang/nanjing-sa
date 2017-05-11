@@ -14,10 +14,10 @@
         </router-link>
       </el-col>
       <el-col :span="4">
-        <a>
+        <router-link to="/cy_input">
           <img src="../../assets/bench/b-3.png"/>
           <p>采样信息录入</p>
-        </a>
+        </router-link>
       </el-col>
       <el-col :span="4">
         <a>

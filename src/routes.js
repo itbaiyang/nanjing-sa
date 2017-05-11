@@ -5,6 +5,7 @@ import Main from './views/Main.vue'
 import Bench from './views/bench/Bench.vue'
 import Market from './views/bench/market/Market.vue'
 import Stallman from './views/bench/stall_man/Stallman.vue'
+import CyInput from './views/bench/cy_input/CYinput.vue'
 import Table from './views/nav1/Table.vue'
 import Form from './views/nav1/Form.vue'
 import user from './views/nav1/user.vue'
@@ -43,6 +44,7 @@ let routes = [
      { path: '/', component: Bench, name: '工作台' },
      { path: '/market', component: Market, name: '市场主体档案' },
      { path: '/stall', component: Stallman, name: '经营户档案' },
+     { path: '/cy_input', component: CyInput, name: '采样手动录入' },
      ]
   },
   {
