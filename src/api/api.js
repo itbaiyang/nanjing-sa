@@ -15,9 +15,10 @@ let base = '/apis';
 
 export const requestLogin = params => { return axios.post(`/login`, params).then(res => res.data); };
 
-export const getUserList = params => { return axios.get(`${base}/stallMan/list`, { params: params }); };
+export const getUserList = params => { return axios.get(`/user/list`, { params: params }); };
 
 export const getStallListPage = params => { return axios.get(`${base}/stallMan/list`, { params: params }); };
+export const getUserListPage = params => { return axios.get(`/user/list`, { params: params }); };
 
 export const removeUser = params => { return axios.get(`/user/remove`, { params: params }); };
 
