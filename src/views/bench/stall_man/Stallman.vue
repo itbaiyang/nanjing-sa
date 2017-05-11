@@ -29,7 +29,7 @@
 			</el-table-column> -->
 			<el-table-column prop="holderId" label="主营项目" width="120" sortable>
 			</el-table-column>
-			<el-table-column prop="entryDate" label="入驻时间" width="140" :formatter="formatData" sortable>
+			<el-table-column prop="entryDate" label="入驻时间" width="140" sortable>
 			</el-table-column>
 			<el-table-column prop="credit" label="诚信评级" min-width="140" sortable>
 			</el-table-column>
@@ -109,7 +109,7 @@
 <script>
 	import util from '../../../common/js/util'
 	//import NProgress from 'nprogress'
-	import { getUserListPage, removeUser, batchRemoveUser, editUser, addUser } from '../../../api/api';
+	import { getStallListPage, removeUser, batchRemoveUser, editUser, addUser } from '../../../api/api';
 
 	export default {
 		data() {
@@ -177,8 +177,7 @@
 				};
 				this.listLoading = true;
 				//NProgress.start();
-				getUserListPage(para).then((res) => {
-					console.log(res)
+				getStallListPage(para).then((res) => {
 					this.total = res.data.page.totalCount;
 					this.users = res.data.page.rows;
 					this.listLoading = false;
